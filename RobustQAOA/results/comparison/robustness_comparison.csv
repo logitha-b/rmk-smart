@@ -1,0 +1,5 @@
+Model,Clean Accuracy,FGSM Accuracy,PGD Accuracy,Robust Accuracy
+Original,0.4233,0.1504,0.1035,0.1035
+Classical,0.1517,0.0366,0.0239,0.0239
+Exact QUBO,0.0236,0.0186,0.0186,0.0186
+QAOA,0.0370,0.0239,0.0200,0.0200

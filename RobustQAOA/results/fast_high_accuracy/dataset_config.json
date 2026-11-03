@@ -1,0 +1,44 @@
+{
+  "dataset": "cifar10",
+  "num_classes": 10,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "n_train": 3000,
+  "n_val": 600,
+  "n_test": 600,
+  "train_per_class": 300,
+  "val_per_class": 60,
+  "test_per_class": 60,
+  "seed": 42,
+  "train_source": "official_cifar10_train",
+  "val_source": "official_cifar10_train_no_overlap",
+  "test_source": "official_cifar10_test",
+  "normalization": {
+    "mean": [
+      0.4914,
+      0.4822,
+      0.4465
+    ],
+    "std": [
+      0.247,
+      0.2435,
+      0.2616
+    ]
+  },
+  "augmentation_train": [
+    "RandomHorizontalFlip",
+    "RandomCrop(32,pad=4)",
+    "RandAugment(n=2,m=7)"
+  ],
+  "augmentation_eval": []
+}

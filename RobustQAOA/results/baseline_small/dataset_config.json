@@ -1,0 +1,28 @@
+{
+  "dataset": "cifar100",
+  "split": "stratified_subset",
+  "seed": 42,
+  "n_train": 10000,
+  "n_val": 2000,
+  "n_test": 2000,
+  "n_classes": 100,
+  "train_source": "official_train_split",
+  "val_source": "official_train_split_no_overlap_with_train",
+  "test_source": "official_test_split",
+  "normalization_mean": [
+    0.5071,
+    0.4867,
+    0.4408
+  ],
+  "normalization_std": [
+    0.2675,
+    0.2565,
+    0.2761
+  ],
+  "augmentation_train": [
+    "RandomCrop(32,pad=4)",
+    "RandomHorizontalFlip",
+    "ColorJitter(b=0.2,c=0.2,s=0.2)"
+  ],
+  "augmentation_eval": []
+}

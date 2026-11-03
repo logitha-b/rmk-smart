@@ -1,0 +1,25 @@
+# configs/resnet_baseline.yaml
+# ResNet18Prunable — 70-80% target configuration
+# Run: python train_70_80.py --config configs/resnet_baseline.yaml
+
+data_dir:        ./data
+num_workers:     0
+seed:            42
+batch_size:      64
+
+# Training phases
+epochs:          150
+warmup_epochs:   15
+lr_phase1:       0.01     # frozen backbone warm-up
+lr_phase2:       0.05     # full fine-tune peak LR
+
+momentum:        0.9
+weight_decay:    0.0005
+mixup_alpha:     0.4
+label_smoothing: 0.1
+pretrained:      true
+
+# Output
+out_dir:         results/baseline_70_80
+ckpt_dir:        results/baseline_70_80/checkpoints
+force_retrain:   false

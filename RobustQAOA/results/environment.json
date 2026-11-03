@@ -1,0 +1,9 @@
+{
+  "python": "3.10.11",
+  "torch": "2.12.1+cpu",
+  "device": "cpu",
+  "qiskit": "2.5.2",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 42,
+  "mode": "debug"
+}

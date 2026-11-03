@@ -1,0 +1,29 @@
+# small_baseline.yaml
+# Configuration for the small-dataset improved baseline experiment.
+# Run with: python train_small_baseline.py --config configs/small_baseline.yaml
+
+# Dataset
+data_dir:          ./data
+num_workers:       0
+
+# Subset sizes (stratified, fixed by seed)
+small_train_size:  10000
+small_val_size:    2000
+small_test_size:   2000
+
+# Reproducibility
+seed:              42
+
+# Training — AdamW + OneCycleLR
+epochs:            40
+batch_size:        128
+learning_rate:     0.001       # AdamW base LR; OneCycleLR peaks at 10× = 0.01
+weight_decay:      0.01
+label_smoothing:   0.1
+
+# Output paths
+small_results_dir:       results/baseline_small
+small_checkpoint_dir:    results/baseline_small/checkpoints
+
+# Set to true to re-run even if checkpoint exists
+force_retrain:     false

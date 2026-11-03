@@ -1,0 +1,66 @@
+
+============================================================
+  EXPERIMENT CONFIGURATION
+============================================================
+  mode                               : research
+  dataset                            : cifar100
+  data_dir                           : ./data
+  num_workers                        : 4
+  batch_size                         : 128
+  epochs                             : 50
+  learning_rate                      : 0.05
+  optimizer                          : sgd
+  momentum                           : 0.9
+  weight_decay                       : 0.0005
+  scheduler                          : cosine
+  seed                               : 42
+  prunable_layer                     : conv1
+  num_prunable_channels              : 16
+  memory_budget_fraction             : 0.6
+  alpha                              : 1.0
+  beta                               : 1.0
+  gamma                              : 0.5
+  lambda_penalty                     : 10.0
+  qaoa_depth                         : 2
+  qaoa_shots                         : 2048
+  qaoa_optimizer                     : COBYLA
+  qaoa_max_iterations                : 200
+  fgsm_epsilon                       : 0.03
+  pgd_epsilon                        : 0.03
+  pgd_step_size                      : 0.007
+  pgd_steps                          : 20
+  defender_attacker_rounds           : 3
+  val_subset_size                    : 1000
+  eval_samples                       : 2000
+  attack_pool_size                   : 500
+  run_ablations                      : True
+  debug_mode                         : False
+  force_retrain                      : True
+  checkpoint_path                    : results/checkpoints/baseline_model.pt
+  [seed] All seeds set to 42
+  [seed] All seeds set to 42
+
+============================================================
+  PHASE 2: BASELINE MODEL
+  Device: cpu
+============================================================
+  [baseline] Training from scratch ...
+
+============================================================
+  TRAINING BASELINE MODEL
+  Epochs: 50  |  LR: 0.05  |  Device: cpu
+============================================================
+  Epoch   1/50 | Train Loss: 3.9173 | Train Acc: 0.0919 | Val Loss: 3.4132 | Val Acc: 0.1705
+  Epoch   2/50 | Train Loss: 3.3943 | Train Acc: 0.1738 | Val Loss: 3.0908 | Val Acc: 0.2326
+  Epoch   3/50 | Train Loss: 3.1609 | Train Acc: 0.2152 | Val Loss: 2.8869 | Val Acc: 0.2782
+  Epoch   4/50 | Train Loss: 2.9880 | Train Acc: 0.2497 | Val Loss: 2.7775 | Val Acc: 0.2965
+  Epoch   5/50 | Train Loss: 2.8598 | Train Acc: 0.2782 | Val Loss: 2.6491 | Val Acc: 0.3195
+  Epoch   6/50 | Train Loss: 2.7707 | Train Acc: 0.2952 | Val Loss: 2.4909 | Val Acc: 0.3498
+  Epoch   7/50 | Train Loss: 2.6963 | Train Acc: 0.3091 | Val Loss: 2.4225 | Val Acc: 0.3683
+  Epoch   8/50 | Train Loss: 2.6074 | Train Acc: 0.3317 | Val Loss: 2.5768 | Val Acc: 0.3464
+  Epoch   9/50 | Train Loss: 2.5670 | Train Acc: 0.3375 | Val Loss: 2.4416 | Val Acc: 0.3634
+  Epoch  10/50 | Train Loss: 2.5140 | Train Acc: 0.3502 | Val Loss: 2.2815 | Val Acc: 0.4029
+  Epoch  11/50 | Train Loss: 2.4647 | Train Acc: 0.3606 | Val Loss: 2.3745 | Val Acc: 0.3820
+  Epoch  12/50 | Train Loss: 2.4287 | Train Acc: 0.3659 | Val Loss: 2.1796 | Val Acc: 0.4233
+  Epoch  13/50 | Train Loss: 2.3898 | Train Acc: 0.3742 | Val Loss: 2.2061 | Val Acc: 0.4100
+  Epoch  14/50 | Train Loss: 2.3593 | Train Acc: 0.3809 | Val Loss: 2.2937 | Val Acc: 0.3965

@@ -1,0 +1,58 @@
+# RESEARCH / FULL MODE CONFIGURATION
+# Use this configuration for final experimental results.
+
+mode: research
+
+# Dataset
+dataset: cifar100
+data_dir: ./data
+num_workers: 0
+
+# Training
+batch_size: 128
+epochs: 50
+learning_rate: 0.05
+optimizer: sgd
+momentum: 0.9
+weight_decay: 0.0005
+scheduler: cosine
+seed: 42
+
+# Model
+prunable_layer: conv1           # The 16-channel bottleneck layer identifier
+num_prunable_channels: 16
+
+# Memory budget (fraction of total prunable-layer memory, e.g. 0.6 means keep ≤60%)
+memory_budget_fraction: 0.60
+
+# QUBO hyperparameters
+alpha: 1.0                      # weight for clean performance
+beta: 1.0                       # weight for adversarial robustness
+gamma: 0.5                      # weight for pairwise synergy
+lambda_penalty: 10.0            # quadratic memory-constraint penalty
+
+# QAOA
+qaoa_depth: 2                   # QAOA p layers
+qaoa_shots: 2048
+qaoa_optimizer: COBYLA
+qaoa_max_iterations: 200
+
+# Adversarial attacks
+fgsm_epsilon: 0.03
+pgd_epsilon: 0.03
+pgd_step_size: 0.007
+pgd_steps: 20
+
+# Defender-attacker loop
+defender_attacker_rounds: 3
+
+# Evaluation
+val_subset_size: 1000           # samples used for expensive ablation
+eval_samples: 2000
+attack_pool_size: 500
+
+# Ablation
+run_ablations: true
+
+# Debug flag
+debug_mode: false

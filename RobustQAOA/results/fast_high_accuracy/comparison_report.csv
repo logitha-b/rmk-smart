@@ -1,0 +1,6 @@
+Metric,"Original SmallCNN (CIFAR-100, 50ep)","ImprovedSmallCNN (CIFAR-100, 40ep, 2k test)",ResNet18 CIFAR-10 (this run)
+Test Accuracy,0.4233,0.4025,0.7967
+Macro F1,0.4120,0.3935,0.7953
+Test Loss,2.1796,2.3768,0.6535
+Parameters,"311,796","1,184,180","11,173,722"
+Training Time(s),N/A,533,0

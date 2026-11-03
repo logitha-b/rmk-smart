@@ -1,0 +1,20 @@
+{
+  "data_dir": "./data",
+  "num_workers": 0,
+  "seed": 42,
+  "batch_size": 64,
+  "epochs": 25,
+  "warmup_epochs": 5,
+  "lr_phase1": 0.01,
+  "lr_phase2": 0.05,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "patience": 7,
+  "pretrained": true,
+  "dataset": "cifar10",
+  "num_classes": 10,
+  "force_retrain": false,
+  "out_dir": "results/fast_high_accuracy",
+  "ckpt_dir": "results/fast_high_accuracy\\checkpoints"
+}

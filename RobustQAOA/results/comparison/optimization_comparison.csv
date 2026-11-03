@@ -1,0 +1,4 @@
+Method,Objective,Runtime (s),Feasible,Retained Channels
+Classical,1.5510,0.0040,True,9
+Exact QUBO,1494665568.6350,0.3743,True,9
+QAOA,1494665568.6295,12.0191,True,9
